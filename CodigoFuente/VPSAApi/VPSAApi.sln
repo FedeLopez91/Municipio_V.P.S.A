@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VPSAApi", "VPSAApi\VPSAApi.csproj", "{D789E726-6E6B-45CC-91E7-E99B5FF34A49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{23D5FEEE-C1E8-4F94-BDE3-B8AFE0884A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{42CE4AF2-BF05-4C00-BD3C-C56200753805}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D789E726-6E6B-45CC-91E7-E99B5FF34A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D789E726-6E6B-45CC-91E7-E99B5FF34A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D789E726-6E6B-45CC-91E7-E99B5FF34A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D789E726-6E6B-45CC-91E7-E99B5FF34A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D5FEEE-C1E8-4F94-BDE3-B8AFE0884A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D5FEEE-C1E8-4F94-BDE3-B8AFE0884A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D5FEEE-C1E8-4F94-BDE3-B8AFE0884A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D5FEEE-C1E8-4F94-BDE3-B8AFE0884A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42CE4AF2-BF05-4C00-BD3C-C56200753805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CE4AF2-BF05-4C00-BD3C-C56200753805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CE4AF2-BF05-4C00-BD3C-C56200753805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CE4AF2-BF05-4C00-BD3C-C56200753805}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D28B12C8-9B21-48DA-BB46-70AE1C796B32}
+	EndGlobalSection
+EndGlobal
