@@ -113,7 +113,7 @@ namespace Persistance.Migrations
                         .HasForeignKey("EstadoDenunciaId");
 
                     b.HasOne("Domain.TipoDenuncia", "TipoDenuncia")
-                        .WithMany("Denuncias")
+                        .WithMany()
                         .HasForeignKey("TipoDenunciaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

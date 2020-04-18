@@ -13,7 +13,9 @@ namespace Domain
         public string EntreCalles2 { get; set; }
         public string Descripcion { get; set; }
         [Required]
+        public int TipoDenunciaId { get; set; }
         public virtual TipoDenuncia TipoDenuncia{get; set;}
+        public int? EstadoDenunciaId { get; set; }
         public virtual EstadoDenuncia EstadoDenuncia { get; set; }
         public string Legajo { get; set; }
         public string IpDenunciante { get; set; }

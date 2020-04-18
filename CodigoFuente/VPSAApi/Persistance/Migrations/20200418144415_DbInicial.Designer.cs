@@ -10,7 +10,7 @@ using Persistance;
 namespace Persistance.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200417230857_DbInicial")]
+    [Migration("20200418144415_DbInicial")]
     partial class DbInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -115,7 +115,7 @@ namespace Persistance.Migrations
                         .HasForeignKey("EstadoDenunciaId");
 
                     b.HasOne("Domain.TipoDenuncia", "TipoDenuncia")
-                        .WithMany("Denuncias")
+                        .WithMany()
                         .HasForeignKey("TipoDenunciaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

@@ -25,14 +25,14 @@ namespace VPSAApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Denuncia>>> GetDenuncias()
         {
-            return await _context.Denuncias.ToListAsync();
+            return await _context.Denuncias.Include(m=>m.TipoDenuncia).ToListAsync();
         }
 
         // GET: api/Denuncias/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Denuncia>> GetDenuncia(int id)
         {
-            var denuncia = await _context.Denuncias.FindAsync(id);
+            var denuncia = await _context.Denuncias.Include(m=>m.TipoDenuncia).FirstOrDefaultAsync(x => x.Id == id);
 
             if (denuncia == null)
             {

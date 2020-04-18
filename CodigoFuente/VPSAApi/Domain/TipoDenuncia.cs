@@ -12,6 +12,6 @@ namespace Domain
         public string Descripcion { get; set; }
         public decimal TiempoMaxTratamiento { get; set; }
 
-        public IEnumerable<Denuncia> Denuncias { get; set; }
+        //public IEnumerable<Denuncia> Denuncias { get; set; }
     }
 }
