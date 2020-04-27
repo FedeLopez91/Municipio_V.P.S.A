@@ -1,0 +1,101 @@
+<div class="col-md-6 offset-3">
+  <div class="card">
+    <div class="card-header text-white bg-primary">
+      Cargar Denuncia
+    </div>
+    <div class="card-body">
+      <form [formGroup]="denunciaForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="form-group">
+          <label class="col-md-12">Ordenanza infringida</label>
+          <select
+            class="form-control"
+            id="sel1"
+            name="TipoDenunciaId"
+            formControlName="TipoDenunciaId"
+            #TipoDenunciaId
+          >
+            <option selected>Seleccionar</option>
+            <option [ngValue]=1>Ruidos Molestos</option>
+            <option [ngValue]=2>Baldio sin Mantenimiento</option>
+            <option [ngValue]=3>Basura en la vía Publica</option>
+            <option [ngValue]=4>Perros Sueltos</option>
+            <option [ngValue]=5>Destrucción de luminarias y/otros..</option>
+          </select>
+        </div>
+        <div
+          *ngIf="
+            denunciaForm.controls['TipoDenunciaId'].invalid &&
+            (denunciaForm.controls['TipoDenunciaId'].dirty ||
+              denunciaForm.controls['TipoDenunciaId'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="denunciaForm.controls['TipoDenunciaId'].errors.required">
+            Ordenanda Infringida es Requerido
+          </div>
+        </div>
+        <div class="row" >
+        <div class="form-group col-md-6">
+          <label>Calle</label>
+            <input type="text" class="form-control" formControlName="Calle" />
+          </div>
+            <div class="form-group col-md-6">
+              <label class="">Número</label>
+              <input type="number" class="form-control" formControlName="Numero" />
+        </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-12">Entre Calles</label>
+            <input type="text" class="form-control col-md-12" formControlName="EntreCalles1" />
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-12">Descripción</label>
+          <textarea
+            class="form-control"
+            rows="7"
+            cols="5"
+            formControlName="Descripcion"
+            #Descripcion
+          ></textarea>
+        </div>
+        <div
+          *ngIf="
+            denunciaForm.controls['Descripcion'].invalid &&
+            (denunciaForm.controls['Descripcion'].dirty ||
+              denunciaForm.controls['Descripcion'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="denunciaForm.controls['Descripcion'].errors.required">
+            Descripción es requerido
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-12">Infractor</label>
+          <input type="text" class="form-control"  formControlName="EntreCalles2" />
+        </div>
+        <!-- <div class="form-group">
+          <label class="col-md-12">Adjuntar Imágenes</label>
+          <input
+            type="file"
+            id="inputGroupFile01"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Inserte imagenes de su dispositivo móvil o pc"
+          />
+        </div> -->
+        <hr />
+        <div class="form-group text-right">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="denunciaForm.pristine || denunciaForm.invalid"
+          >
+            Crear Denuncia
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -15,15 +15,23 @@ namespace Persistance
                 var tipoDenuncias = new List<TipoDenuncia>{
                     new TipoDenuncia
                 {
-                    Nombre = "Test 1"
+                    Nombre = "Ruidos Molestos"
                 },
                 new TipoDenuncia
                 {
-                    Nombre = "Test 2"
+                    Nombre = "Baldio sin Mantenimiento"
                 },
                 new TipoDenuncia
                 {
-                    Nombre = "Test 3"
+                    Nombre = "Basura en la vía Publica"
+                },
+                new TipoDenuncia
+                {
+                    Nombre = "Perros Sueltos"
+                },
+                new TipoDenuncia
+                {
+                    Nombre = "Destrucción de luminarias y/otros.."
                 }
                 };
 
