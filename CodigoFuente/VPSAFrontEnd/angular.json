@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "VPSAFrontEnd"
+  "defaultProject": "VPSAFrontEnd",
+  "cli": {
+    "analytics": false
+  }
 }
