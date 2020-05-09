@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class DenunciaService {
-  baseUrl = 'http://localhost:58086/api';
+  baseUrl = 'http://localhost:60000/api';
 
   constructor(private httpClient: HttpClient) {}
 

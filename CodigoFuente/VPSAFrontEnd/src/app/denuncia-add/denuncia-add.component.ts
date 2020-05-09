@@ -12,7 +12,7 @@ export class DenunciaAddComponent implements OnInit {
   denunciaForm: FormGroup;
   constructor(private fb: FormBuilder, private ds: DenunciaService) {
   }
-  
+
   submitForm() {
     this.ds.addDenuncias(this.denunciaForm.value).subscribe(res => {
       alert('Guardado con Exito');

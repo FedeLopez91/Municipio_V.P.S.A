@@ -1,5 +1,4 @@
 import {ITipoDenuncia} from './TipoDenuncia';
-
 export interface IDenuncia {
     id: number;
     fecha: string;
@@ -15,4 +14,3 @@ export interface IDenuncia {
     legajo: string;
     ipDenunciante: string;
   }
-  

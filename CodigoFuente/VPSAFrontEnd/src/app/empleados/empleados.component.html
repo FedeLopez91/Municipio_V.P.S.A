@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>.::Empleados::.</title>
+
+  </head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard"> &nbsp; Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+       <!-- id="navbarSupportedContent"-->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ordenanzas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Covid-19</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Servicios
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/denuncia-add">Denuncia</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contactanos..</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+
+          </form>
+    </div>
+</nav>
+
+    <br><br>
+
+    <!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Tablero de Denuncias</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2">
+        <a class="text-success" (click)="add()">
+         <!-- <mdb-icon fas icon="plus" size="2x"></mdb-icon> -->
+        </a>
+      </span>
+<!--"TablayPaginador"-->
+  <div id="TablayPaginador" ng-show="AccionABMC == 'L' && Lista.length">
+    <table class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">#Nro</th>
+          <th class="text-center">Fecha Inicio</th>
+          <th class="text-center">Estado</th>
+          <th class="text-center">Asignada a:</th>
+          <th class="text-center">Ver Denuncia</th>
+          <th class="text-center" style="white-space:nowrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acciones&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> <!--tiene unos espacios especiales (alt+32) para que no divida la linea-->
+        </tr>
+
+        <tr *ngFor="let denuncia of Denuncia; let id = index">
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'id', $event)" (blur)="updateList(id, 'id', $event)"># &nbsp;{{denuncia.id}}</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)">13/05/2020</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'companyName', $event)" (blur)="updateList(id, 'companyName', $event)">Iniciada</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'country', $event)" (blur)="updateList(id, 'country', $event)">Sin Asignar</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'city', $event)" (blur)="updateList(id, 'city', $event)">Link Denuncia</span>
+          </td>
+          <td class="text-center btn-group-xs">
+            <button class="btn btn-outline-primary btn-sm" title="Tomar Denuncia">
+            <span style="font-size: 1.5em; color: black;"> <fa-icon [icon]="faHandshake"></fa-icon></span>
+            </button>
+            <button class="btn btn-outline-primary btn-sm" title="Cargar Trabajo"
+                    ng-click="Modificar(dto)">
+                    <span style="font-size: 1.5em; color: black;"> <fa-icon [icon]="faCogs"></fa-icon></span>
+            </button>
+              <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" title="Derivar a:" aria-haspopup="true" aria-expanded="false">
+                <span style="font-size: 1.5em; color: black;"> <fa-icon [icon]="faArrowRight"></fa-icon></span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Paola Juncos</a>
+                <a class="dropdown-item" href="#">Julian Bozas</a>
+                <a class="dropdown-item" href="#">Federico Lopez</a>
+                <a class="dropdown-item" href="#">Roman Sadowski</a>
+              </div>
+        </td>
+          <td>
+
+            <span class="table-remove">
+              <button class="my-0 btn btn-outline-primary btn-sm" color="secondary" title="Quitar de la Lista"
+              rounded="true" (click)="remove(id)">
+            <span style="font-size: 1.3em; color: rgb(88, 80, 80);"> <fa-icon [icon]="faEraser"></fa-icon></span>
+            &nbsp; Quitar.. </button>
+
+            </span>
+          </td>
+        </tr>
+    </table>
+    <!-- Paginador-->
+    <div class="col-sm-12 paginador">
+        <div class="pull-left lblPagReg">
+            <span class="label label-default">Registros:</span>
+        </div>
+        <div class="text-center col-sm-12">
+            <!--Aqui se importo la directiva del paginador-->
+            <ul uib-pagination total-items="RegistrosTotal" ng-model="PaginaActual" max-size="10" class="pagination-sm" boundary-links="true" first-text="Primera" last-text="Ultima" previous-text="Anterior" next-text="Siguiente" rotate="true" ng-change="Buscar()"></ul>
+        </div>
+            </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
