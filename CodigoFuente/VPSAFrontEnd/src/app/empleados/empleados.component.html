@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-md-10 offset-1">
     <div class="card">
-      <div class="card-header text-white bg-primary">
+      <div class="card-header text-white" style="background-color: #2990CA;">
         Tablero de Denuncias
       </div>
       <div class="card-body">
@@ -41,7 +41,7 @@
                   Sin Asignar
                 </td>
                 <td>
-                  {{denuncia.estado != null ? denuncia.estado.nombre : ''}}
+                  {{denuncia.estado != null ? denuncia.estado.nombre : 'Registrada'}}
                 </td>
                 <td class="text-center btn-group-xs">
                   <button
@@ -54,7 +54,7 @@
                     class="btn btn-outline-primary btn-sm"
                     title="Tomar Denuncia"
                   >
-                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    <i class="fa fa-handshake" aria-hidden="true"></i>
                   </button>
                   <button
                     class="btn btn-outline-primary btn-sm"
@@ -90,7 +90,7 @@
                     rounded="true"
                     (click)="remove(id)"
                   >
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>
                 </td>
               </tr>
@@ -98,7 +98,7 @@
             <!-- Paginador-->
             <div class="col-sm-12 paginador">
               <div class="pull-left lblPagReg">
-                <span class="label label-default">Registros: {{Denuncia.length}}</span>
+                <span class="label label-default">Registros: {{Denuncia!=null ? Denuncia.length : ''}}</span>
               </div>
               <div class="text-center col-sm-12">
                 <!--Aqui se importo la directiva del paginador-->

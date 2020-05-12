@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import {faHandshake, faArrowRight, faCogs, faEraser, faCoffee} from '@fortawesome/free-solid-svg-icons';
 import { peticionesService } from '../service/peticiones.service';
 import { Observable } from 'rxjs/';
 import { IDenuncia } from '../Models/Denuncia';

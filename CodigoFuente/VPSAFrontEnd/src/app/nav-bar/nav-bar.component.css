@@ -48,3 +48,17 @@ img {
     margin-top:30px;
     margin-bottom:10px;
     }
+
+    .nav-link{
+        color:#2990CA!important;
+        font-size: large;
+    }
+
+    .btn-outline-custom{
+        color: #2990CA;
+        border-color: #2990CA;
+    }
+    .btn-outline-custom:hover{
+        color: white ;
+        background-color: #2990CA;
+    }
