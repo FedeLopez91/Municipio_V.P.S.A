@@ -25,7 +25,7 @@ namespace VPSAApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Denuncia>>> GetDenuncias()
         {
-            return await _context.Denuncias.Include(m=>m.TipoDenuncia).ToListAsync();
+            return await _context.Denuncias.Include(m=>m.TipoDenuncia).Include(m=>m.EstadoDenuncia).OrderByDescending(x=>x.Fecha).ToListAsync();
         }
 
         // GET: api/Denuncias/5
@@ -80,6 +80,7 @@ namespace VPSAApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Denuncia>> PostDenuncia(Denuncia denuncia)
         {
+            denuncia.Fecha = DateTime.Now;
             _context.Denuncias.Add(denuncia);
             await _context.SaveChangesAsync();
 

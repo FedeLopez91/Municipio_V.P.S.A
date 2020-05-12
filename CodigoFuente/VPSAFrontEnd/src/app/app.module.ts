@@ -7,13 +7,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NavBarComponent} from './nav-bar/nav-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { DenunciaAddComponent } from './denuncia-add/denuncia-add.component';
-
-
-
-//import { routing, appRoutingProviders } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -21,6 +18,7 @@ import { DenunciaAddComponent } from './denuncia-add/denuncia-add.component';
     DashboardComponent,
     EmpleadosComponent,
     DenunciaAddComponent,
+    NavBarComponent
     //appRoutingProviders,
     ],
   imports: [

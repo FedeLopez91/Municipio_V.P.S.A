@@ -36,24 +36,4 @@ export class DenunciaService {
     console.log(errorMessage);
     return throwError(errorMessage);
   }
-
-  // addDenuncias(TipoDenuncia, Descripcion) {
-  // const Idenuncia ={
-  //   Id:0,
-  //   Fecha : "",
-  //   Calle : "",
-  //   Numero:0,
-  //   EntreCalles1:"",
-  //   EntreCalles2:"",
-  //   Descripcion,
-  //   TipoDenunciaId: +TipoDenuncia,
-  //   EstadoDenunciaId : "",
-  //   Legajo:"",
-  //   IpDenunciante:""
-  //   }
-
-  // console.log(Idenuncia);
-  // this.http.post(`${this.baseUrl}Denuncias`, Idenuncia)
-  //     .subscribe(() => console.log('Done'));
-  // }
 }
