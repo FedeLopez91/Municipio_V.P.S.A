@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { peticionesService } from '../service/peticiones.service';
 import { Observable } from 'rxjs/';
-import { IDenuncia } from '../Models/Denuncia';
+//Linea comentada, error ->import { IDenuncia } from '../Models/Denuncia'
+//import { IDenuncia } from '../Models/Denuncia';
 @Component({
   selector: 'app-empleados',
   templateUrl: './empleados.component.html',

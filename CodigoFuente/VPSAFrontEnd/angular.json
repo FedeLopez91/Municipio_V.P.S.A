@@ -125,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MunicipioPlantilla"
+    }
+  },
+  "defaultProject": "MunicipioPlantilla",
+  "cli": {
+    "analytics": "55199c8f-b48b-45c2-9116-62dd29f64ba2"
+  }
 }

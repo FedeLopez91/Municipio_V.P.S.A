@@ -1,13 +1,12 @@
-
 <div class="col-md-6 offset-3 mt-2">
   <div class="card">
     <div class="card-header text-white" style="background-color: #2990CA;">
-      Cargar Denuncia
+      Cargar Denuncia <small _ngcontent-wgo-c47="" style="margin-bottom:200px;text-align: right; margin-left: 620px;">* Campos obligatorios</small>
     </div>
     <div class="card-body">
       <form [formGroup]="denunciaForm" (ngSubmit)="submitForm()" novalidate>
         <div class="form-group">
-          <label class="col-md-12">Ordenanza infringida</label>
+          <label>Ordenanza infringida * </label>
           <select
             class="form-control"
             id="sel1"
@@ -15,12 +14,13 @@
             formControlName="TipoDenunciaId"
             #TipoDenunciaId
           >
-            <option selected>Seleccionar</option>
+            <option selected>- Seleccionar -</option>
             <option [ngValue]="1">Ruidos Molestos</option>
             <option [ngValue]="2">Baldio sin Mantenimiento</option>
             <option [ngValue]="3">Basura en la vía Publica</option>
             <option [ngValue]="4">Perros Sueltos</option>
             <option [ngValue]="5">Destrucción de luminarias y/otros..</option>
+            <option [ngValue]="6">Otro...</option>
           </select>
         </div>
         <div
@@ -37,11 +37,11 @@
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            <label>Calle</label>
+            <label>Calle * </label>
             <input type="text" class="form-control" formControlName="Calle" />
           </div>
           <div class="form-group col-md-6">
-            <label class="">Número</label>
+            <label class="">Número * </label>
             <input
               type="number"
               class="form-control"
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-12">Entre Calles</label>
+          <label >Entre Calles * </label>
           <input
             type="text"
             class="form-control col-md-12"
@@ -59,7 +59,7 @@
         </div>
 
         <div class="form-group">
-          <label class="col-md-12">Descripción</label>
+          <label>Descripción * </label>
           <textarea
             class="form-control"
             rows="5"
@@ -81,23 +81,24 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-12">Infractor</label>
+          <label>Infractor</label>
           <input
             type="text"
             class="form-control"
             formControlName="EntreCalles2"
           />
         </div>
-        <!-- <div class="form-group">
-          <label class="col-md-12">Adjuntar Imágenes</label>
+        <div class="form-group">
+          <label>Adjuntar Imágenes</label>
           <input
+            class="col-md-12"
             type="file"
             id="inputGroupFile01"
             data-toggle="tooltip"
             data-placement="top"
             title="Inserte imagenes de su dispositivo móvil o pc"
           />
-        </div> -->
+        </div> 
         <hr />
         <div class="form-group text-right">
           <button
